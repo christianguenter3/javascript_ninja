@@ -1,0 +1,24 @@
+<html>
+<head>
+	<script type="text/javascript" src="assert.js"></script>
+	<script type="text/javascript">
+		window.onload = function() { 
+			console.log("Test");
+			test(true, function() {
+				pause();
+				setTimeout( function() {
+					assert(true, "Test");
+				},1000);
+				resume();
+			});
+		};
+	</script>
+</head>
+<style type="text/css">
+	#results li.pass { color: green; }
+	#results li.fail { color: red; }
+</style>
+<body>
+	<ul id="results"/>
+</body>
+</html>
